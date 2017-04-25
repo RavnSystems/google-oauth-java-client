@@ -47,7 +47,7 @@ public class TokenResponse extends GenericJson {
    * none.
    */
   @Key("expires_in")
-  private Long expiresInSeconds;
+  private Object expiresInSeconds;
 
   /**
    * Refresh token which can be used to obtain new access tokens using {@link RefreshTokenRequest}
@@ -109,7 +109,17 @@ public class TokenResponse extends GenericJson {
    * {@code null} for none.
    */
   public final Long getExpiresInSeconds() {
-    return expiresInSeconds;
+    if (expiresInSeconds instanceof Long) {
+      return (Long) expiresInSeconds;
+    } else if (expiresInSeconds instanceof Number) {
+      expiresInSeconds = ((Number) expiresInSeconds).longValue();
+      return (Long) expiresInSeconds;
+    } else if (expiresInSeconds instanceof String) {
+      expiresInSeconds = Long.parseLong((String) expiresInSeconds);
+      return (Long) expiresInSeconds;
+    }
+
+    return null;
   }
 
   /**

@@ -7,8 +7,25 @@
     <version>1.22.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-  <artifactId>google-oauth-client</artifactId>
+
+  <!-- RAVN SYSTEMS:
+
+     - we have changed the groupId, artifactId and version for this
+       artifact to be inline with our conventions.
+
+     - the check style plugin has been disabled since it was failing
+       because it could not find the checkstyle.xml configuration file
+
+     - the TokenResponse class has been modified to parse "expiresInSeconds"
+       as either a String or a Long.
+           - see: https://github.com/google/google-oauth-java-client/issues/62
+
+   -->
+  <groupId>com.ravn.github</groupId>
+  <artifactId>google-oauth-client-1.22.0</artifactId>
   <name>Google OAuth Client Library for Java</name>
+  <version>001-SNAPSHOT</version>
+
   <description>
     Google OAuth Client Library for Java. Functionality that works on all supported Java platforms,
     including Java 5 (or higher) desktop (SE) and web (EE), Android, and Google App Engine.

@@ -1,2 +1,5 @@
 target/
 bin/
+# IDE files # 
+*.idea 
+*.iml 
