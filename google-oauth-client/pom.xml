@@ -31,6 +31,20 @@
     including Java 5 (or higher) desktop (SE) and web (EE), Android, and Google App Engine.
   </description>
 
+  <!-- RAVN: distribution config -->
+  <distributionManagement>
+    <repository>
+      <id>mavn.ravn.co.uk</id>
+      <name>mavn.ravn.co.uk-releases</name>
+      <url>https://mavn.ravn.co.uk/artifactory/libs-releases-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>mavn.ravn.co.uk</id>
+      <name>mavn.ravn.co.uk-snapshots</name>
+      <url>https://mavn.ravn.co.uk/artifactory/libs-snapshots-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <build>
     <plugins>
       <plugin>
@@ -102,4 +116,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+
+
 </project>
