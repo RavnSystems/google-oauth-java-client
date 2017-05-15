@@ -24,7 +24,7 @@
   <groupId>com.ravn.github</groupId>
   <artifactId>google-oauth-client-1.22.0</artifactId>
   <name>Google OAuth Client Library for Java</name>
-  <version>001</version>
+  <version>002-SNAPSHOT</version>
 
   <description>
     Google OAuth Client Library for Java. Functionality that works on all supported Java platforms,
